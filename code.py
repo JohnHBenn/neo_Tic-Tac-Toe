@@ -36,11 +36,10 @@ while True:
             if x<=5 and x>=3 and y<=2:      #sets parameters for buttons that can be lit up
                 if trellis.pixels[x,y] == (0,0,0):
                     trellis.pixels[x,y] = color
-                time.sleep(0.2)
-            if color == red:
-                    color = blue
-            elif color == blue:
-                    color = red
+                    if color == red:
+                        color = blue
+                    elif color == blue:
+                        color = red
     for i in range(8):
         if trellis.pixels[soln[i][0]] == red and trellis.pixels[soln[i][1]] == red and trellis.pixels[soln[i][2]] == red:
             trellis.pixels.fill(red)
